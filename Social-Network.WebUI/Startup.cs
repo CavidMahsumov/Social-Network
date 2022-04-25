@@ -45,7 +45,7 @@ namespace Social_Network.WebUI
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}");
+                endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Default}");
             });
         }
     }
