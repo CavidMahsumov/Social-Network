@@ -13,6 +13,7 @@ namespace Social_Network.WebUI.Models
         [Required]
         [DataType(DataType.Password)]   
         public string Password { get; set; }
-              
+        public bool RemeberMe { get; set; }
+
     }
 }
