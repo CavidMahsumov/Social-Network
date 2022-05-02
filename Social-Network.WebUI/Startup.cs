@@ -32,6 +32,8 @@ namespace Social_Network.WebUI
             services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
                 .AddEntityFrameworkStores<CustomIdentityDbContext>()
                 .AddDefaultTokenProviders();
+            services.AddSession();
+            services.AddRazorPages();
             services.AddRazorPages();
         }
 
@@ -51,7 +53,10 @@ namespace Social_Network.WebUI
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

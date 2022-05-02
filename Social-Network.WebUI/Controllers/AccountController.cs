@@ -38,7 +38,7 @@ namespace Social_Network.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = _signInManager.PasswordSignInAsync(loginViewModel.Email,
+                var result = _signInManager.PasswordSignInAsync(loginViewModel.Username,
                     loginViewModel.Password,loginViewModel.RemeberMe, false).Result;
                 if (result.Succeeded)
                 {
