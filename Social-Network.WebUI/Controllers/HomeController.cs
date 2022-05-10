@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Social_Network.WebUI.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         public IActionResult Default()
@@ -102,9 +102,6 @@ namespace Social_Network.WebUI.Controllers
         {
             return View();
         }
-        public IActionResult SendPhotoPost()
-        {
-            
-        }
+        
     }
 }
