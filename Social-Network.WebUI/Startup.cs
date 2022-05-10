@@ -29,9 +29,9 @@ namespace Social_Network.WebUI
            
             services.AddDbContext<CustomIdentityDbContext>(
                 options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SocialMediaDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
-            services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
-                .AddEntityFrameworkStores<CustomIdentityDbContext>()
-                .AddDefaultTokenProviders();
+           services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
+               .AddEntityFrameworkStores<CustomIdentityDbContext>()
+               .AddDefaultTokenProviders();
             services.AddSession();
             services.AddRazorPages();
             services.AddRazorPages();

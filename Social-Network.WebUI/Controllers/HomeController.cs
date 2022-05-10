@@ -102,5 +102,9 @@ namespace Social_Network.WebUI.Controllers
         {
             return View();
         }
+        public IActionResult SendPhotoPost()
+        {
+            
+        }
     }
 }
