@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Social-Network.Entities\Social-Network.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

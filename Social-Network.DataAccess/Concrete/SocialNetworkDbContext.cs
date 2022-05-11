@@ -16,6 +16,11 @@ namespace Social_Network.DataAccess.Concrete
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Notfication> Notfications { get; set; }
+        public DbSet<Stories> Stories { get; set; }
 
     }
 }
