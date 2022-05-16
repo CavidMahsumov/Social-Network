@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Social-Network.DataAccess\Social-Network.DataAccess.csproj" />
     <ProjectReference Include="..\Social-Network.Entities\Social-Network.Entities.csproj" />
   </ItemGroup>
 

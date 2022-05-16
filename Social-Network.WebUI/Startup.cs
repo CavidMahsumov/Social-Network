@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Social_Network.Business.Abstract;
+using Social_Network.Business.Concrete;
+using Social_Network.DataAccess.Abstarct;
 using Social_Network.DataAccess.Concrete;
 using Social_Network.WebUI.Entities;
 using System;
@@ -26,7 +29,9 @@ namespace Social_Network.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+            services.AddScoped<IUserService, Business.Concrete.UserManager>();
+            services.AddScoped<IPostService, PostManager>();
+            services.AddScoped<IPostDal, EfPostDal>();
             services.AddDbContext<CustomIdentityDbContext>(
                 options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SocialMediaDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
            services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()

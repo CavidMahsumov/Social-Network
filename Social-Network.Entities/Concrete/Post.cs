@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Social_Network.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Social_Network.Entities.Concrete
 {
-    public class Post
+    public class Post:IEntity
     {
         public int Id { get; set; }
         public string Description { get; set; }

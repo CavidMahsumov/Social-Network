@@ -6,34 +6,34 @@ using System.Text;
 
 namespace Social_Network.Business.Concrete
 {
-    public class UserManager : IUserService
+    public class StoryManager : IStoryService
     {
-        public void Add(User product)
+        public void Add(Story story)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(User product)
+        public void Delete(Story story)
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll()
+        public List<Story> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetByCategory(int categoryId)
+        public List<Story> GetByCategory(int categoryId)
         {
             throw new NotImplementedException();
         }
 
-        public User GetById(int id)
+        public Story GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(User product)
+        public void Update(Story story)
         {
             throw new NotImplementedException();
         }

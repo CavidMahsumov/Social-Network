@@ -20,7 +20,7 @@ namespace Social_Network.DataAccess.Concrete
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Notfication> Notfications { get; set; }
-        public DbSet<Stories> Stories { get; set; }
+        public DbSet<Story> Stories { get; set; }
 
     }
 }

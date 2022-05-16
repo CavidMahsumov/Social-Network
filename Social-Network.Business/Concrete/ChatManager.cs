@@ -6,34 +6,34 @@ using System.Text;
 
 namespace Social_Network.Business.Concrete
 {
-    public class UserManager : IUserService
+    public class ChatManager : IChatService
     {
-        public void Add(User product)
+        public void Add(Chat chat)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(User product)
+        public void Delete(Chat chat)
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll()
+        public List<Chat> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetByCategory(int categoryId)
+        public List<Chat> GetByCategory(int categoryId)
         {
             throw new NotImplementedException();
         }
 
-        public User GetById(int id)
+        public Chat GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(User product)
+        public void Update(Chat chat)
         {
             throw new NotImplementedException();
         }

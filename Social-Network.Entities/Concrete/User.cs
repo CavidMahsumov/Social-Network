@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Social_Network.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Social_Network.Entities.Concrete
 {
-    public  class User
+    public  class User:IEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

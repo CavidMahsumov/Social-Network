@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Social-Network.Business\Social-Network.Business.csproj" />
     <ProjectReference Include="..\Social-Network.DataAccess\Social-Network.DataAccess.csproj" />
   </ItemGroup>
 

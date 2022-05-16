@@ -1,8 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Social_Network.Business.Abstract;
+using Social_Network.WebUI.Entities;
+using Social_Network.WebUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Social_Network.WebUI.Controllers
@@ -10,9 +17,25 @@ namespace Social_Network.WebUI.Controllers
     //[Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
+
+        private IUserService _userService;
+        private IHttpContextAccessor _httpContext;
+        private UserManager<CustomIdentityUser> _userManager;
+        private readonly IWebHostEnvironment _webhost;
+        private IPostService _postService;
+
+        public HomeController(IUserService userService, IHttpContextAccessor httpContext, UserManager<CustomIdentityUser> userManager, IWebHostEnvironment webhost, IPostService postService)
+        {
+            _userService = userService;
+            _httpContext = httpContext;
+            _userManager = userManager;
+            _webhost = webhost;
+            _postService = postService;
+        }
         public IActionResult Default()
         {
-            return View();
+            var list=_postService.GetAll();
+            return View(list);
         }
         public IActionResult DefaultStorie()
         {
@@ -70,8 +93,13 @@ namespace Social_Network.WebUI.Controllers
         {
             return View();
         }
-        public IActionResult AccountInformation()
+        public async Task<IActionResult> AccountInformation()
         {
+            var userId = _httpContext.HttpContext.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _userManager.FindByIdAsync(userId);
+
+          
+
             return View();
         }
         public IActionResult ContactInformation()
