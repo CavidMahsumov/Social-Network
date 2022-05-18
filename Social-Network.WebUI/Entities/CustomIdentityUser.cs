@@ -8,5 +8,6 @@ namespace Social_Network.WebUI.Entities
 {
     public class CustomIdentityUser:IdentityUser
     {
+        public string ImageUrl { get; set; }
     }
 }

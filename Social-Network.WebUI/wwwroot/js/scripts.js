@@ -405,3 +405,26 @@ function PageScroll() {
 
     });
 }
+
+function uploadFiles(inputId) {
+    var input = document.getElementById(inputId);
+    var files = input.files;
+    var formData = new FormData();
+
+    for (var i = 0; i != files.length; i++) {
+        formData.append("files", files[i]);
+    }
+
+    $.ajax(
+        {
+            url: "/Post/Index",
+            data: formData,
+            processData: false,
+            contentType: false,
+            type: "POST",
+            success: function (data) {
+                alert("Files Uploaded!");
+            }
+        }
+    );
+}
